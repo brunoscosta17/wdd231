@@ -3,8 +3,8 @@
     --surface: #0f172a;
     --surface-2: #0b1324;
     --text: #f3f6ff;
-    --muted: #c7d0ff;
-    --brand: #7aa2ff;
+    --muted: #dde6ff;
+    --brand: #9dbbff;
     --ok: #2ee59d;
     --border: rgba(255, 255, 255, .14);
 }
@@ -281,12 +281,4 @@ h1 {
 .filter-btn:hover,
 .nav__link:hover {
     background: var(--surface);
-}
-
-/* Improve link contrast on dark surfaces */
-:root {
-    --brand: #9dbbff;
-    /* a bit lighter than before */
-    --muted: #dde6ff;
-    /* raise contrast for muted text like credits */
 }
