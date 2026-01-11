@@ -268,3 +268,24 @@ h1 {
     outline: 3px solid rgba(122, 162, 255, .8);
     outline-offset: 3px;
 }
+
+/* Make interactive surfaces solid to avoid contrast flags */
+.menu-btn,
+.filter-btn,
+.icon-link {
+    background: var(--surface-2);
+}
+
+/* Hover states stay dark (no low-contrast light overlays) */
+.filter-btn:hover,
+.nav__link:hover {
+    background: var(--surface);
+}
+
+/* Improve link contrast on dark surfaces */
+:root {
+    --brand: #9dbbff;
+    /* a bit lighter than before */
+    --muted: #dde6ff;
+    /* raise contrast for muted text like credits */
+}
