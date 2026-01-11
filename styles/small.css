@@ -1,7 +1,7 @@
 :root {
     --bg: #0b1220;
-    --surface: #111a2e;
-    --surface-2: #16213b;
+    --surface: #0f172a;
+    --surface-2: #0b1324;
     --text: #f3f6ff;
     --muted: #c7d0ff;
     --brand: #7aa2ff;
@@ -131,7 +131,7 @@ a:hover {
 
 .nav__link.is-active {
     outline: 2px solid rgba(122, 162, 255, .5);
-    background: rgba(122, 162, 255, .12);
+    background: var(--surface-2);
 }
 
 h1 {
@@ -140,7 +140,7 @@ h1 {
 }
 
 .card {
-    background: rgba(255, 255, 255, .06);
+    background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 18px;
     padding: 1rem;
@@ -176,7 +176,7 @@ h1 {
 }
 
 .filter-btn.is-selected {
-    background: rgba(122, 162, 255, .18);
+    background: var(--surface-2);
     border-color: rgba(122, 162, 255, .5);
 }
 
@@ -199,7 +199,7 @@ h1 {
     padding: .85rem .9rem;
     border-radius: 16px;
     border: 1px solid var(--border);
-    background: rgba(0, 0, 0, .18);
+    background: var(--surface-2);
 }
 
 .course__name {
@@ -234,7 +234,7 @@ h1 {
     gap: .8rem;
     padding: 1.25rem 1rem;
     border-top: 1px solid var(--border);
-    background: rgba(0, 0, 0, .25);
+    background: #020617;
 }
 
 .footer__block {
