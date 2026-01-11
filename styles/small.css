@@ -19,7 +19,8 @@ html {
 
 body {
     margin: 0;
-    background: linear-gradient(180deg, var(--bg), #070b13);
+    background-color: var(--bg);
+    background-image: linear-gradient(180deg, var(--bg), #070b13);
     color: var(--text);
 }
 
@@ -164,7 +165,7 @@ h1 {
 
 .filter-btn {
     border: 1px solid var(--border);
-    background: rgba(255, 255, 255, .06);
+    background: var(--surface-2);
     color: var(--text);
     padding: .55rem .8rem;
     border-radius: 999px;
