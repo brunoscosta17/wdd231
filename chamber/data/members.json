@@ -1,0 +1,67 @@
+{
+  "members": [
+    {
+      "name": "Idaho Websites",
+      "address": "2115 S Vista Avenue, Boise ID 83705",
+      "phone": "(208) 342-9386",
+      "website": "https://idahowebsites.com/",
+      "image": "idweb.png",
+      "membership": 3,
+      "tagline": "Web design & marketing"
+    },
+    {
+      "name": "Surge Web Design",
+      "address": "4072 E Arch Drive, Meridian ID 83646",
+      "phone": "(208) 631-0640",
+      "website": "https://www.surgewebdesign.com/",
+      "image": "surge.png",
+      "membership": 2,
+      "tagline": "Modern sites for business"
+    },
+    {
+      "name": "Graphic Zen",
+      "address": "1788 E Summerplace Court, Meridian ID 83646",
+      "phone": "(208) 631-4984",
+      "website": "https://graphiczendotcom/",
+      "image": "graphiczen.png",
+      "membership": 1,
+      "tagline": "Branding & creative"
+    },
+    {
+      "name": "Peppershock Media",
+      "address": "1215 3rd Street, Nampa ID 83651",
+      "phone": "(208) 461-5070",
+      "website": "https://www.peppershock.com/",
+      "image": "peppershock.png",
+      "membership": 2,
+      "tagline": "Digital marketing"
+    },
+    {
+      "name": "Flash Tech Services",
+      "address": "Star, Idaho 83669",
+      "phone": "(208) 488-5810",
+      "website": "https://flashtechnicalservices.com/",
+      "image": "flashtech.png",
+      "membership": 1,
+      "tagline": "IT services"
+    },
+    {
+      "name": "Metro Express Car Wash",
+      "address": "1725 E Overland Road, Meridian ID 83642",
+      "phone": "(208) 888-4073",
+      "website": "https://www.metroexpresscarwash.com/",
+      "image": "metro.png",
+      "membership": 3,
+      "tagline": "Car wash membership"
+    },
+    {
+      "name": "Boise Coffee Co.",
+      "address": "10 Main Street, Boise ID 83702",
+      "phone": "(208) 555-1212",
+      "website": "https://example.com/",
+      "image": "coffee.png",
+      "membership": 1,
+      "tagline": "Coffee & community"
+    }
+  ]
+}

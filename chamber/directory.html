@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Directory | Chamber of Commerce</title>
+    <meta name="description"
+        content="Member directory for the Chamber of Commerce with local businesses and contact information." />
+    <meta name="author" content="Bruno Costa" />
+
+    <!-- FAVICON -->
+    <link rel="icon" href="images/favicon.ico" />
+
+    <!-- OPEN GRAPH (Facebook) -->
+    <meta property="og:title" content="Member Directory | Chamber of Commerce" />
+    <meta property="og:description" content="Find local member businesses, contact details, and website links." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://brunoscosta17.github.io/wdd231/chamber/images/og-directory.jpg" />
+    <meta property="og:url" content="https://brunoscosta17.github.io/wdd231/chamber/directory.html" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+
+    <!-- JS -->
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <img src="images/logo.png" alt="Chamber logo" width="48" height="48" />
+            <div>
+                <p class="brand-title">Your City Chamber of Commerce</p>
+                <p class="brand-subtitle">Member Directory</p>
+            </div>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="discover.html">Discover</a>
+            <a class="active" href="directory.html" aria-current="page">Directory</a>
+            <a href="join.html">Join</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Business Directory</h1>
+
+        <section class="view-controls" aria-label="Toggle view">
+            <button id="grid" class="view-btn" type="button" aria-pressed="true" title="Grid view">
+                ⬛⬛⬛
+            </button>
+            <button id="list" class="view-btn" type="button" aria-pressed="false" title="List view">
+                ☰
+            </button>
+        </section>
+
+        <!-- Members render here -->
+        <section id="members" class="members grid" aria-live="polite"></section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-cols">
+            <div>
+                <h2>Contact</h2>
+                <p>Your City Chamber of Commerce</p>
+                <p>123 Example Street</p>
+                <p>(00) 0000-0000</p>
+                <p>contact@chamber.com</p>
+            </div>
+
+            <div>
+                <h2>Social</h2>
+                <div class="social">
+                    <a href="#" aria-label="YouTube">YouTube</a>
+                    <a href="#" aria-label="X/Twitter">X</a>
+                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                </div>
+            </div>
+
+            <div>
+                <h2>Dev</h2>
+                <p>WDD 231 | Bruno Costa</p>
+                <p>&copy; <span id="currentYear"></span></p>
+                <p><span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

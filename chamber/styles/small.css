@@ -1,0 +1,179 @@
+:root {
+    --bg: #ffffff;
+    --text: #1b1b1b;
+    --muted: #666;
+    --border: #d9d9d9;
+    --card: #f7f7f7;
+    --accent: #0b5ea8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: 1rem 0 2rem;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.brand-title {
+    margin: 0;
+    font-weight: 700;
+}
+
+.brand-subtitle {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.menu-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    padding: 0.5rem 0.65rem;
+    border-radius: 0.5rem;
+}
+
+.site-nav {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.5rem;
+}
+
+.site-nav a.active,
+.site-nav a:hover {
+    background: #e8f1ff;
+    color: var(--accent);
+}
+
+.site-nav.open {
+    display: flex;
+}
+
+h1 {
+    margin-top: 1rem;
+}
+
+.view-controls {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0.5rem 0 1rem;
+}
+
+.view-btn {
+    border: 1px solid var(--border);
+    background: #fff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.members.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.member {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 1rem;
+}
+
+.member h2 {
+    margin: 0;
+}
+
+.tagline {
+    color: var(--muted);
+    margin: 0.25rem 0 0.75rem;
+}
+
+.logo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0.75rem 0;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+/* LIST VIEW: sem imagens + “zebra striping” */
+.members.list {
+    display: block;
+}
+
+.members.list .member {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+}
+
+.members.list .member:nth-child(even) {
+    background: #eef7ff;
+}
+
+.members.list .logo,
+.members.list .tagline {
+    display: none;
+}
+
+.site-footer {
+    border-top: 1px solid var(--border);
+    padding: 1rem;
+}
+
+.footer-cols {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+}
+
+.footer-cols h2 {
+    font-size: 1rem;
+    margin: 0 0 0.5rem;
+}
+
+.social {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.error {
+    color: #b00020;
+}
