@@ -6,10 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description"
         content="Chamber of Commerce home page with events, weather, and featured member spotlights." />
-    <meta name="author" content="Your Name" />
+    <meta name="author" content="Bruno Costa" />
+    <meta property="og:title" content="Your City Chamber of Commerce | Home">
+    <meta property="og:description"
+        content="Join the chamber to connect with local businesses, see current events, and get the latest weather updates.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://brunoscosta17.github.io/wdd231/chamber/index.html">
+    <meta property="og:image" content="https://brunoscosta17.github.io/wdd231/chamber/images/og-home.jpg">
 
     <title>Chamber | Home</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon.ico" />
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/small.css" />
@@ -42,8 +51,8 @@
         <!-- HERO -->
         <section class="hero">
             <picture>
-                <!-- If you have a larger hero image, you can swap sources here -->
-                <img src="images/hero.jpg" alt="Downtown view representing the local business community" width="1200"
+                <source srcset="images/hero.webp" type="image/webp">
+                <img src="images/hero.jpeg" alt="Downtown view representing the local business community" width="1200"
                     height="600" loading="eager">
             </picture>
 
@@ -107,12 +116,11 @@
         <p id="lastModified"></p>
     </footer>
 
-    <script src="scripts/navigation.js"></script>
-    <script src="scripts/dates.js"></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
 
-    <!-- NEW scripts for W03 -->
-    <script src="scripts/weather.js"></script>
-    <script src="scripts/spotlights.js"></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
 </body>
 
 </html>
