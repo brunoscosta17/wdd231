@@ -1,18 +1,118 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Chamber | Bruno Costa</title>
+    <meta name="description"
+        content="Chamber of Commerce home page with events, weather, and featured member spotlights." />
+    <meta name="author" content="Your Name" />
+
+    <title>Chamber | Home</title>
+
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
 </head>
 
 <body>
-    <header>
-        <h1>Chamber</h1>
-        <p>In progress (W02+).</p>
-        <p><a href="../index.html">Back to Home</a></p>
+    <header class="site-header">
+        <div class="brand">
+            <img src="images/logo.png" alt="Chamber logo" width="48" height="48" loading="lazy" />
+            <div class="brand-text">
+                <h1>Your City Chamber</h1>
+                <p>Connecting businesses & community</p>
+            </div>
+        </div>
+
+        <button id="menuButton" class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav id="primaryNav" class="site-nav" aria-label="Primary navigation">
+            <a href="index.html" class="active" aria-current="page">Home</a>
+            <a href="discover.html">Discover</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html">Join</a>
+        </nav>
     </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <picture>
+                <!-- If you have a larger hero image, you can swap sources here -->
+                <img src="images/hero.jpg" alt="Downtown view representing the local business community" width="1200"
+                    height="600" loading="eager">
+            </picture>
+
+            <div class="hero-content">
+                <h2>Grow with the Chamber</h2>
+                <p>Networking, advocacy, and local opportunities.</p>
+                <a class="cta-button" href="join.html">Join the Chamber</a>
+            </div>
+        </section>
+
+        <div class="home-grid">
+            <!-- CURRENT EVENTS -->
+            <section class="card" aria-labelledby="eventsTitle">
+                <h3 id="eventsTitle">Current Events</h3>
+
+                <ul class="events-list">
+                    <li>
+                        <strong>Business Breakfast:</strong> Friday 8:00 AM — Community Center
+                    </li>
+                    <li>
+                        <strong>Small Biz Workshop:</strong> Tuesday 6:00 PM — City Library
+                    </li>
+                    <li>
+                        <strong>Ribbon Cutting:</strong> New store opening this week!
+                    </li>
+                </ul>
+
+                <p class="muted">(*You can replace these with your real events later.)</p>
+            </section>
+
+            <!-- WEATHER -->
+            <section class="card weather" aria-labelledby="weatherTitle">
+                <h3 id="weatherTitle">Weather</h3>
+
+                <div class="weather-now">
+                    <p class="temp">
+                        <span id="currentTemp">--</span><span aria-hidden="true">°F</span>
+                    </p>
+                    <p class="desc" id="weatherDesc">Loading...</p>
+                </div>
+
+                <h4>3-Day Forecast</h4>
+                <ul id="forecastList" class="forecast-list" aria-live="polite"></ul>
+
+                <p class="muted small">
+                    Data provided by OpenWeather.
+                </p>
+            </section>
+
+            <!-- SPOTLIGHTS -->
+            <section class="card" aria-labelledby="spotlightsTitle">
+                <h3 id="spotlightsTitle">Member Spotlights</h3>
+
+                <div id="spotlights" class="spotlights-grid" aria-live="polite"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="currentYear"></span> Your City Chamber</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/dates.js"></script>
+
+    <!-- NEW scripts for W03 -->
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/spotlights.js"></script>
 </body>
 
 </html>

@@ -18,4 +18,26 @@
         grid-template-columns: 1fr 1fr 1fr;
         align-items: start;
     }
+
+    /* ---------- HOME (desktop) ---------- */
+    .home-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 1rem;
+        align-items: start;
+    }
+
+    /* Spotlights section takes full width */
+    .home-grid>section:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .spotlights-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-content {
+        max-width: 520px;
+        left: 2rem;
+        bottom: 2rem;
+    }
 }
