@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Site Plan | Chamber Project</title>
+
+    <!-- Typography (1–3 fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+
+<body>
+    <header class="top">
+        <h1>Site Plan — Chamber of Commerce</h1>
+        <p>Planning document for the WDD 231 “Chamber” site (Term 1, 2026).</p>
+    </header>
+
+    <main class="wrap">
+        <section class="card" id="site-name">
+            <h2>1. Site Name</h2>
+            <p><strong>Name:</strong> Idaho Community Chamber</p>
+            <p><strong>Reason:</strong> The name communicates a chamber that promotes local businesses and community
+                opportunities across Idaho. It is simple, memorable, and clearly connected to economic/community
+                support.</p>
+            <p class="muted"><strong>Optional domain idea:</strong> idaho-community-chamber.org</p>
+        </section>
+
+        <section class="card" id="purpose">
+            <h2>2. Site Purpose</h2>
+            <p>
+                The purpose of this website is to serve as a central hub for chamber information and community
+                engagement.
+                It provides membership details, a business directory sourced from a JSON data file, featured member
+                spotlights,
+                and a local weather section to support residents and visitors.
+            </p>
+            <ul>
+                <li>Explain chamber benefits and provide a way to join (Join page + form).</li>
+                <li>Display a member directory using <code>data/members.json</code>.</li>
+                <li>Show “Spotlight” members (random Silver/Gold members) on the home page.</li>
+                <li>Display current weather and a 3-day forecast from OpenWeather.</li>
+            </ul>
+        </section>
+
+        <section class="card" id="scenarios">
+            <h2>3. Scenarios</h2>
+            <ul>
+                <li>“Which local businesses offer web design, marketing, or IT services, and how can I contact them?”
+                </li>
+                <li>“Who are the featured (spotlight) chamber members today?”</li>
+                <li>“What is the current temperature and the 3-day forecast for the area?”</li>
+                <li>“How do I join the chamber, and what membership level is best for my business?”</li>
+            </ul>
+        </section>
+
+        <section class="card" id="colors">
+            <h2>4. Color Scheme</h2>
+            <p>The following colors will be used consistently across the site and are applied in this document.</p>
+
+            <div class="swatch">
+                <div class="box primary"></div>
+                <div>
+                    <p><strong>Primary:</strong> <code>#1F4E79</code></p>
+                    <p class="muted">Used for: header background, headings, navigation, links, primary buttons.</p>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="box accent"></div>
+                <div>
+                    <p><strong>Accent:</strong> <code>#F4B400</code></p>
+                    <p class="muted">Used for: highlights, section borders, badges, hover/active accents.</p>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="box bg"></div>
+                <div>
+                    <p><strong>Background:</strong> <code>#F7F9FC</code></p>
+                    <p class="muted">Used for: page background and spacing areas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card" id="typography">
+            <h2>6. Typography</h2>
+            <ul>
+                <li><strong>Poppins</strong> — used for headings (H1–H3) to create a strong hierarchy.</li>
+                <li><strong>Inter</strong> — used for body text for readability across devices.</li>
+            </ul>
+            <p class="muted">These fonts are already applied in this site plan document.</p>
+        </section>
+
+        <section class="card" id="data-alignment">
+            <h2>Project Content Alignment (Members, Spotlights, Weather)</h2>
+
+            <h3>Member Directory Data (<code>data/members.json</code>)</h3>
+            <p>The directory is populated from a JSON file containing member objects with the following fields:</p>
+            <ul>
+                <li><strong>name</strong>, <strong>address</strong>, <strong>phone</strong>, <strong>website</strong>,
+                    <strong>image</strong>, <strong>tagline</strong></li>
+                <li><strong>membership</strong> numeric levels: <strong>1 = Bronze</strong>, <strong>2 =
+                        Silver</strong>, <strong>3 = Gold</strong></li>
+            </ul>
+            <p>Current members included:</p>
+            <ul>
+                <li>Idaho Websites (Gold) — Web design & marketing</li>
+                <li>Surge Web Design (Silver) — Modern sites for business</li>
+                <li>Graphic Zen (Bronze) — Branding & creative</li>
+                <li>Peppershock Media (Silver) — Digital marketing</li>
+                <li>Flash Tech Services (Bronze) — IT services</li>
+                <li>Metro Express Car Wash (Gold) — Car wash membership</li>
+                <li>Boise Coffee Co. (Bronze) — Coffee & community</li>
+            </ul>
+
+            <h3>Spotlights (<code>scripts/spotlights.js</code>)</h3>
+            <p>
+                The spotlight section selects only <strong>Silver (2)</strong> and <strong>Gold (3)</strong> members,
+                shuffles them,
+                and randomly displays <strong>2 or 3</strong> spotlight cards on the home page.
+            </p>
+            <p>Eligible spotlight members from the current JSON:</p>
+            <ul>
+                <li>Gold: Idaho Websites, Metro Express Car Wash</li>
+                <li>Silver: Surge Web Design, Peppershock Media</li>
+            </ul>
+            <p>Each spotlight card displays: member name, logo image, membership label, phone, address, and a website
+                link.</p>
+
+            <h3>Weather (<code>scripts/weather.js</code>)</h3>
+            <p>
+                The weather section uses the OpenWeather <strong>forecast</strong> endpoint (5-day / 3-hour data).
+                It displays:
+            </p>
+            <ul>
+                <li><strong>Current temperature</strong> (using the first forecast item)</li>
+                <li><strong>Current description</strong> (capitalized words)</li>
+                <li><strong>3-day forecast</strong> (filters midday entries: <code>12:00:00</code> and shows the next
+                    three days)</li>
+            </ul>
+            <p class="muted">
+                Note: The current implementation uses imperial units (Fahrenheit) and fixed coordinates in the script.
+            </p>
+        </section>
+
+        <section class="card" id="wireframe">
+            <h2>7. Wireframe (Home Page)</h2>
+
+            <div class="grid">
+                <div>
+                    <h3>Mobile View</h3>
+                    <pre aria-label="mobile wireframe">
++---------------------------+
+| Logo / Site Name          |
++---------------------------+
+| Hamburger Navigation      |
++---------------------------+
+| Hero Image + Headline     |
+| CTA Button (Join)         |
++---------------------------+
+| Weather (current + 3-day) |
++---------------------------+
+| Spotlights (2–3 cards)    |
++---------------------------+
+| Events / Info Section     |
++---------------------------+
+| Footer (contact/social)   |
++---------------------------+
+          </pre>
+                </div>
+
+                <div>
+                    <h3>Desktop / Wide View</h3>
+                    <pre aria-label="desktop wireframe">
++------------------------------------------------------+
+| Logo | Site Name                     Nav links       |
++------------------------------------------------------+
+| Hero image/banner        | Headline + CTA (Join)     |
++------------------------------------------------------+
+| Weather (panel)          | Spotlights (2–3 cards)    |
++------------------------------------------------------+
+| Directory preview / featured info (grid)             |
++------------------------------------------------------+
+| Footer (contact | links | social)                    |
++------------------------------------------------------+
+          </pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="card" id="validation">
+            <h2>8. Valid HTML and CSS</h2>
+            <ul>
+                <li>Semantic HTML structure with a proper <code>&lt;title&gt;</code> and viewport meta tag.</li>
+                <li>External CSS applies the defined color scheme and typography.</li>
+                <li>Designed to validate in the W3C HTML Validator and CSS Validator.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <p>WDD 231 • Site Plan • Term 1 (2026)</p>
+    </footer>
+</body>
+
+</html>
