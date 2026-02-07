@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Join the chamber by applying for membership." />
+    <meta name="author" content="Bruno Costa" />
+    <meta property="og:title" content="Your City Chamber of Commerce | Join">
+    <meta property="og:description" content="Apply to join the chamber and explore membership benefits.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://brunoscosta17.github.io/wdd231/chamber/join.html">
+    <meta property="og:image" content="https://brunoscosta17.github.io/wdd231/chamber/images/og-home.jpg">
+
+    <title>Chamber | Join</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <img src="images/logo.png" alt="Chamber logo" width="48" height="48" loading="lazy" />
+            <div class="brand-text">
+                <h1>Your City Chamber</h1>
+                <p>Connecting businesses & community</p>
+            </div>
+        </div>
+
+        <button id="menuButton" class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav id="primaryNav" class="site-nav" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="discover.html">Discover</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html" class="active" aria-current="page">Join</a>
+        </nav>
+    </header>
+
+    <main class="join-page">
+        <h2>Join the Chamber</h2>
+        <p class="muted">Fill out the application form to become a member.</p>
+
+        <div class="join-layout">
+            <!-- FORM -->
+            <section class="card join-card" aria-labelledby="joinFormTitle">
+                <h3 id="joinFormTitle">Membership Application</h3>
+
+                <form method="get" action="thankyou.html" class="form">
+                    <label>
+                        <span>First Name *</span>
+                        <input type="text" name="fname" title="Enter your first name" autocomplete="given-name"
+                            required>
+                    </label>
+
+                    <label>
+                        <span>Last Name *</span>
+                        <input type="text" name="lname" title="Enter your last name" autocomplete="family-name"
+                            required>
+                    </label>
+
+                    <label>
+                        <span>Organizational Title</span>
+                        <input type="text" name="orgtitle" title="Enter your title (min 7 characters)"
+                            autocomplete="organization-title" pattern="[A-Za-zÀ-ÖØ-öø-ÿ -]{7,}">
+                        <small class="muted small">Minimum 7 characters. Letters, spaces, and hyphens only.</small>
+                    </label>
+
+                    <label>
+                        <span>Email *</span>
+                        <input type="email" name="email" title="Enter your email" autocomplete="email"
+                            placeholder="example@email.com" required>
+                    </label>
+
+                    <label>
+                        <span>Mobile Phone *</span>
+                        <input type="tel" name="phone" title="Enter your mobile phone" autocomplete="tel" required>
+                    </label>
+
+                    <label>
+                        <span>Business/Organization Name *</span>
+                        <input type="text" name="org" title="Enter your organization name" autocomplete="organization"
+                            required>
+                    </label>
+
+                    <label>
+                        <span>Membership Level *</span>
+                        <select name="membership" title="Select membership level" required>
+                            <option value="" selected disabled>Select…</option>
+                            <option value="np">NP Membership (np)</option>
+                            <option value="bronze">Bronze Membership (bronze)</option>
+                            <option value="silver">Silver Membership (silver)</option>
+                            <option value="gold">Gold Membership (gold)</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        <span>Business/Organization Description</span>
+                        <textarea name="description" title="Describe your organization" rows="4"></textarea>
+                    </label>
+
+                    <!-- Timestamp hidden -->
+                    <input type="hidden" name="timestamp" id="timestamp">
+
+                    <input class="cta-button submit-btn" type="submit" value="Submit Application">
+                </form>
+            </section>
+
+            <!-- MEMBERSHIP CARDS -->
+            <aside class="card membership-card" aria-labelledby="levelsTitle">
+                <h3 id="levelsTitle">Membership Levels</h3>
+                <p class="muted small">Click “View benefits” to see details.</p>
+
+                <div class="membership-grid">
+                    <article class="mcard">
+                        <h4>NP Membership</h4>
+                        <p class="muted small">Non-profit organizations. No fee.</p>
+                        <button class="linklike" type="button" data-open="modal-np">View benefits</button>
+                    </article>
+
+                    <article class="mcard">
+                        <h4>Bronze</h4>
+                        <p class="muted small">Basic visibility and networking.</p>
+                        <button class="linklike" type="button" data-open="modal-bronze">View benefits</button>
+                    </article>
+
+                    <article class="mcard">
+                        <h4>Silver</h4>
+                        <p class="muted small">More exposure + event discounts.</p>
+                        <button class="linklike" type="button" data-open="modal-silver">View benefits</button>
+                    </article>
+
+                    <article class="mcard">
+                        <h4>Gold</h4>
+                        <p class="muted small">Top exposure + premium perks.</p>
+                        <button class="linklike" type="button" data-open="modal-gold">View benefits</button>
+                    </article>
+                </div>
+
+                <!-- 4 Modals using <dialog> -->
+                <dialog id="modal-np" class="modal">
+                    <div class="modal__content">
+                        <h4>NP Membership Benefits</h4>
+                        <ul>
+                            <li>Directory listing</li>
+                            <li>Access to chamber networking events</li>
+                            <li>Monthly newsletter</li>
+                        </ul>
+                        <button type="button" class="modal__close" data-close>Close</button>
+                    </div>
+                </dialog>
+
+                <dialog id="modal-bronze" class="modal">
+                    <div class="modal__content">
+                        <h4>Bronze Membership Benefits</h4>
+                        <ul>
+                            <li>All NP benefits</li>
+                            <li>Member badge for your website</li>
+                            <li>Discounts on select events</li>
+                        </ul>
+                        <button type="button" class="modal__close" data-close>Close</button>
+                    </div>
+                </dialog>
+
+                <dialog id="modal-silver" class="modal">
+                    <div class="modal__content">
+                        <h4>Silver Membership Benefits</h4>
+                        <ul>
+                            <li>All Bronze benefits</li>
+                            <li>Higher event discounts</li>
+                            <li>Spotlight feature (2x/year)</li>
+                        </ul>
+                        <button type="button" class="modal__close" data-close>Close</button>
+                    </div>
+                </dialog>
+
+                <dialog id="modal-gold" class="modal">
+                    <div class="modal__content">
+                        <h4>Gold Membership Benefits</h4>
+                        <ul>
+                            <li>All Silver benefits</li>
+                            <li>Priority spotlight placement</li>
+                            <li>Training sessions and premium promotion</li>
+                        </ul>
+                        <button type="button" class="modal__close" data-close>Close</button>
+                    </div>
+                </dialog>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="currentYear"></span> Your City Chamber</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

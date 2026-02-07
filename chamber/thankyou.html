@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Thank you for applying to join the chamber." />
+    <meta name="author" content="Bruno Costa" />
+
+    <title>Chamber | Thank You</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <img src="images/logo.png" alt="Chamber logo" width="48" height="48" loading="lazy" />
+            <div class="brand-text">
+                <h1>Your City Chamber</h1>
+                <p>Connecting businesses & community</p>
+            </div>
+        </div>
+
+        <button id="menuButton" class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav id="primaryNav" class="site-nav" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="discover.html">Discover</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html">Join</a>
+        </nav>
+    </header>
+
+    <main class="thankyou-page">
+        <section class="card">
+            <h2>Thank you!</h2>
+            <p>Your application was submitted successfully. Here is what we received:</p>
+
+            <div class="summary-grid" aria-live="polite">
+                <div class="summary-item"><strong>First Name:</strong> <span id="out-fname"></span></div>
+                <div class="summary-item"><strong>Last Name:</strong> <span id="out-lname"></span></div>
+                <div class="summary-item"><strong>Email:</strong> <span id="out-email"></span></div>
+                <div class="summary-item"><strong>Mobile Phone:</strong> <span id="out-phone"></span></div>
+                <div class="summary-item"><strong>Organization:</strong> <span id="out-org"></span></div>
+                <div class="summary-item"><strong>Timestamp:</strong> <span id="out-ts"></span></div>
+            </div>
+
+            <p class="muted small">We will contact you soon.</p>
+            <a class="cta-button" href="index.html">Back to Home</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="currentYear"></span> Your City Chamber</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
