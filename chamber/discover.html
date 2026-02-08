@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description"
+        content="Discover local attractions, landmarks, and highlights of our community. Explore places to visit and learn more about our area." />
+    <meta name="author" content="Bruno Costa" />
+
+    <meta property="og:title" content="Your City Chamber of Commerce | Discover">
+    <meta property="og:description"
+        content="Explore local highlights, landmarks, and places of interest. Learn what makes our area a great place to live, work, and visit.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://brunoscosta17.github.io/wdd231/chamber/discover.html">
+    <meta property="og:image" content="https://brunoscosta17.github.io/wdd231/chamber/images/og-image.png">
+
+    <title>Chamber | Discover</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <img src="images/logo.png" alt="Chamber logo" width="48" height="48" loading="lazy" />
+            <div class="brand-text">
+                <h1>Your City Chamber</h1>
+                <p>Connecting businesses & community</p>
+            </div>
+        </div>
+
+        <button id="menuButton" class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav id="primaryNav" class="site-nav" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="discover.html" class="active" aria-current="page">Discover</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html">Join</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Discover</h2>
+
+        <!-- Required: localStorage message output -->
+        <section class="card" aria-label="Visitor message">
+            <p id="visit-message" aria-live="polite"></p>
+        </section>
+
+        <!-- Optional intro (helps UX/SEO) -->
+        <section class="card" aria-label="About the area">
+            <h3>Places of Interest</h3>
+            <p>
+                Explore local attractions, landmarks, and community highlights. Click “Learn More” on any card to see
+                the name
+                again (demo action) and get inspired for your next visit.
+            </p>
+        </section>
+
+        <!-- Required: cards injected here by discover.js -->
+        <section aria-label="Discover cards">
+            <div id="discover-cards" class="cards"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="currentYear"></span> Your City Chamber</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <!-- shared scripts -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+
+    <!-- required: module script so it can import ../data/discover.mjs -->
+    <script type="module" src="scripts/discover.js"></script>
+</body>
+
+</html>
