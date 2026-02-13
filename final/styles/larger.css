@@ -1,0 +1,48 @@
+@media (min-width: 760px) {
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .nav__list {
+        position: static;
+        display: flex;
+        gap: .25rem;
+        width: auto;
+        padding: 0;
+        background: transparent;
+        border: 0;
+        backdrop-filter: none;
+    }
+
+    .controls {
+        grid-template-columns: 1.2fr .9fr auto auto;
+        align-items: end;
+    }
+
+    .stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .destinations {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .destinations.destinations--list {
+        grid-template-columns: 1fr;
+    }
+
+    .site-footer {
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .destinations {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

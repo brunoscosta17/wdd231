@@ -5,22 +5,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Wander Brazil | Home</title>
-    <meta name="description"
-        content="Wander Brazil is a small travel inspiration site featuring curated destinations in Brazil with filters, favorites, and details in an accessible modal." />
+    <title>Wander Brazil | Thank You</title>
+    <meta name="description" content="Thank you page displaying submitted form values using URLSearchParams." />
     <meta name="author" content="Bruno Costa" />
 
     <link rel="icon" href="../images/favicon.ico" />
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Wander Brazil | Home" />
-    <meta property="og:description"
-        content="Curated destinations in Brazil with filters, favorites, and details in an accessible modal." />
+    <meta property="og:title" content="Wander Brazil | Thank You" />
+    <meta property="og:description" content="Submitted values are displayed here using URLSearchParams." />
     <meta property="og:image" content="https://brunoscosta17.github.io/wdd231/images/og-image.png" />
-    <meta property="og:url" content="https://brunoscosta17.github.io/wdd231/final/index.html" />
+    <meta property="og:url" content="https://brunoscosta17.github.io/wdd231/final/thankyou.html" />
     <meta property="og:type" content="website" />
 
-    <!-- Font (allowed; not a framework/library) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
@@ -29,7 +25,7 @@
     <link rel="stylesheet" href="styles/small.css" />
     <link rel="stylesheet" href="styles/larger.css" />
 
-    <script type="module" src="scripts/pages/home.js"></script>
+    <script type="module" src="scripts/pages/thankyou.js"></script>
 </head>
 
 <body>
@@ -60,42 +56,15 @@
     </header>
 
     <main class="container">
-        <h1>Explore Brazil, one destination at a time</h1>
+        <h1>Thanks for joining!</h1>
 
         <section class="card">
-            <h2>What this site does</h2>
-            <p>
-                This project demonstrates responsive layout, accessible navigation, dynamic data rendering with Fetch,
-                localStorage preferences, and an accessible modal dialog for details.
-            </p>
-            <p>
-                Use the <a href="catalog.html">Destinations</a> page to browse 20 curated places and save favorites.
-            </p>
-        </section>
+            <h2>Submitted data</h2>
+            <div id="submission" class="submission" aria-live="polite"></div>
 
-        <section class="card">
-            <h2>Your quick stats</h2>
-            <div class="stats">
-                <div class="stat">
-                    <div class="stat__label">Saved favorites</div>
-                    <div class="stat__value" id="favoriteCount">0</div>
-                </div>
-                <div class="stat">
-                    <div class="stat__label">Preferred view</div>
-                    <div class="stat__value" id="preferredView">Grid</div>
-                </div>
-                <div class="stat">
-                    <div class="stat__label">Total destinations</div>
-                    <div class="stat__value" id="totalDestinations">20</div>
-                </div>
-            </div>
-        </section>
-
-        <section class="card">
-            <h2>Start here</h2>
             <div class="cta">
                 <a class="btn" href="catalog.html">Browse destinations</a>
-                <a class="btn btn--ghost" href="join.html">Join the newsletter</a>
+                <a class="btn btn--ghost" href="join.html">Submit again</a>
             </div>
         </section>
     </main>

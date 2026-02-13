@@ -1,0 +1,202 @@
+[
+  {
+    "id": "rio-corcovado",
+    "name": "Christ the Redeemer",
+    "city": "Rio de Janeiro",
+    "state": "RJ",
+    "category": "Culture",
+    "rating": 4.9,
+    "bestSeason": "May–September",
+    "summary": "An iconic monument with sweeping city views from Corcovado Mountain."
+  },
+  {
+    "id": "rio-sugarloaf",
+    "name": "Sugarloaf Mountain",
+    "city": "Rio de Janeiro",
+    "state": "RJ",
+    "category": "Nature",
+    "rating": 4.8,
+    "bestSeason": "April–October",
+    "summary": "Cable car rides and panoramic sunsets overlooking Guanabara Bay."
+  },
+  {
+    "id": "ilhabela",
+    "name": "Ilhabela Beaches",
+    "city": "Ilhabela",
+    "state": "SP",
+    "category": "Beach",
+    "rating": 4.7,
+    "bestSeason": "September–March",
+    "summary": "Island beaches, waterfalls, and hiking trails surrounded by Atlantic Forest."
+  },
+  {
+    "id": "paraty",
+    "name": "Paraty Historic Center",
+    "city": "Paraty",
+    "state": "RJ",
+    "category": "Culture",
+    "rating": 4.7,
+    "bestSeason": "May–August",
+    "summary": "Cobblestone streets, colonial architecture, and boat tours to nearby islands."
+  },
+  {
+    "id": "chapada-diamantina",
+    "name": "Chapada Diamantina",
+    "city": "Lençóis",
+    "state": "BA",
+    "category": "Adventure",
+    "rating": 4.9,
+    "bestSeason": "May–September",
+    "summary": "Canyons, caves, waterfalls, and multi-day trekking routes."
+  },
+  {
+    "id": "jeri",
+    "name": "Jericoacoara Dunes",
+    "city": "Jijoca de Jericoacoara",
+    "state": "CE",
+    "category": "Beach",
+    "rating": 4.8,
+    "bestSeason": "July–December",
+    "summary": "Golden dunes, lagoons, and consistent winds for kitesurfing."
+  },
+  {
+    "id": "iguazu",
+    "name": "Iguaçu Falls",
+    "city": "Foz do Iguaçu",
+    "state": "PR",
+    "category": "Nature",
+    "rating": 5.0,
+    "bestSeason": "March–May",
+    "summary": "One of the largest waterfall systems in the world with unforgettable viewpoints."
+  },
+  {
+    "id": "bonito",
+    "name": "Bonito Rivers",
+    "city": "Bonito",
+    "state": "MS",
+    "category": "Nature",
+    "rating": 4.8,
+    "bestSeason": "June–August",
+    "summary": "Crystal-clear snorkeling, caves, and eco tours with strict conservation rules."
+  },
+  {
+    "id": "pantanal",
+    "name": "Pantanal Wildlife",
+    "city": "Poconé",
+    "state": "MT",
+    "category": "Nature",
+    "rating": 4.7,
+    "bestSeason": "July–October",
+    "summary": "One of the best places on Earth for wildlife spotting and photography."
+  },
+  {
+    "id": "floripa",
+    "name": "Florianópolis",
+    "city": "Florianópolis",
+    "state": "SC",
+    "category": "Beach",
+    "rating": 4.6,
+    "bestSeason": "November–March",
+    "summary": "A mix of surf beaches, lagoons, trails, and lively neighborhoods."
+  },
+  {
+    "id": "salvador",
+    "name": "Pelourinho",
+    "city": "Salvador",
+    "state": "BA",
+    "category": "Culture",
+    "rating": 4.6,
+    "bestSeason": "April–June",
+    "summary": "Colorful historic streets, music, and Afro-Brazilian cultural heritage."
+  },
+  {
+    "id": "ouro-preto",
+    "name": "Ouro Preto",
+    "city": "Ouro Preto",
+    "state": "MG",
+    "category": "Culture",
+    "rating": 4.7,
+    "bestSeason": "May–August",
+    "summary": "Baroque churches and steep streets from Brazil's gold rush era."
+  },
+  {
+    "id": "gramado",
+    "name": "Gramado",
+    "city": "Gramado",
+    "state": "RS",
+    "category": "City",
+    "rating": 4.5,
+    "bestSeason": "June–August",
+    "summary": "Mountain town with cozy cafés, festivals, and cool winter weather."
+  },
+  {
+    "id": "manaus",
+    "name": "Meeting of the Waters",
+    "city": "Manaus",
+    "state": "AM",
+    "category": "Nature",
+    "rating": 4.6,
+    "bestSeason": "July–November",
+    "summary": "A striking natural phenomenon where two rivers run side by side without mixing."
+  },
+  {
+    "id": "lencois",
+    "name": "Lençóis Maranhenses",
+    "city": "Barreirinhas",
+    "state": "MA",
+    "category": "Adventure",
+    "rating": 4.9,
+    "bestSeason": "June–September",
+    "summary": "White sand dunes filled with seasonal blue lagoe-like lagoons."
+  },
+  {
+    "id": "natal",
+    "name": "Genipabu Dunes",
+    "city": "Natal",
+    "state": "RN",
+    "category": "Adventure",
+    "rating": 4.5,
+    "bestSeason": "August–December",
+    "summary": "Dune buggy rides and ocean views on the northern coastline."
+  },
+  {
+    "id": "buzios",
+    "name": "Búzios Peninsula",
+    "city": "Armação dos Búzios",
+    "state": "RJ",
+    "category": "Beach",
+    "rating": 4.6,
+    "bestSeason": "April–June",
+    "summary": "Charming streets, calm coves, and beaches for every vibe."
+  },
+  {
+    "id": "pipa",
+    "name": "Praia da Pipa",
+    "city": "Tibau do Sul",
+    "state": "RN",
+    "category": "Beach",
+    "rating": 4.7,
+    "bestSeason": "September–February",
+    "summary": "Cliffs, dolphins, and a relaxed beach town atmosphere."
+  },
+  {
+    "id": "sao-paulo",
+    "name": "São Paulo Museums",
+    "city": "São Paulo",
+    "state": "SP",
+    "category": "City",
+    "rating": 4.4,
+    "bestSeason": "March–June",
+    "summary": "A major cultural hub with museums, parks, and diverse food scenes."
+  },
+  {
+    "id": "brasilia",
+    "name": "Brasília Architecture",
+    "city": "Brasília",
+    "state": "DF",
+    "category": "City",
+    "rating": 4.3,
+    "bestSeason": "May–September",
+    "summary": "Modernist landmarks and bold city planning designed in the 20th century."
+  }
+]

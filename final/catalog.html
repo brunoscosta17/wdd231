@@ -5,22 +5,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Wander Brazil | Home</title>
+    <title>Wander Brazil | Destinations</title>
     <meta name="description"
-        content="Wander Brazil is a small travel inspiration site featuring curated destinations in Brazil with filters, favorites, and details in an accessible modal." />
+        content="Browse Brazil destinations with category filters, search, grid/list view, favorites, and an accessible details modal." />
     <meta name="author" content="Bruno Costa" />
 
     <link rel="icon" href="../images/favicon.ico" />
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Wander Brazil | Home" />
+    <meta property="og:title" content="Wander Brazil | Destinations" />
     <meta property="og:description"
-        content="Curated destinations in Brazil with filters, favorites, and details in an accessible modal." />
+        content="Browse Brazil destinations with filters, favorites, and an accessible details modal." />
     <meta property="og:image" content="https://brunoscosta17.github.io/wdd231/images/og-image.png" />
-    <meta property="og:url" content="https://brunoscosta17.github.io/wdd231/final/index.html" />
+    <meta property="og:url" content="https://brunoscosta17.github.io/wdd231/final/catalog.html" />
     <meta property="og:type" content="website" />
 
-    <!-- Font (allowed; not a framework/library) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
@@ -29,7 +27,7 @@
     <link rel="stylesheet" href="styles/small.css" />
     <link rel="stylesheet" href="styles/larger.css" />
 
-    <script type="module" src="scripts/pages/home.js"></script>
+    <script type="module" src="scripts/pages/catalog.js"></script>
 </head>
 
 <body>
@@ -60,45 +58,57 @@
     </header>
 
     <main class="container">
-        <h1>Explore Brazil, one destination at a time</h1>
+        <h1>Destinations</h1>
 
         <section class="card">
-            <h2>What this site does</h2>
-            <p>
-                This project demonstrates responsive layout, accessible navigation, dynamic data rendering with Fetch,
-                localStorage preferences, and an accessible modal dialog for details.
-            </p>
-            <p>
-                Use the <a href="catalog.html">Destinations</a> page to browse 20 curated places and save favorites.
+            <h2>Filters</h2>
+
+            <div class="controls" role="group" aria-label="Destination controls">
+                <label class="control">
+                    <span class="control__label">Search</span>
+                    <input id="searchInput" class="input" type="search" placeholder="Try: beach, rio, waterfall..." />
+                </label>
+
+                <label class="control">
+                    <span class="control__label">Category</span>
+                    <select id="categorySelect" class="input">
+                        <option value="all">All</option>
+                    </select>
+                </label>
+
+                <div class="control">
+                    <span class="control__label">View</span>
+                    <div class="segmented" role="group" aria-label="View options">
+                        <button id="viewGrid" class="segmented__btn" type="button">Grid</button>
+                        <button id="viewList" class="segmented__btn" type="button">List</button>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <span class="control__label">Favorites</span>
+                    <button id="toggleFavorites" class="btn btn--ghost" type="button">Show favorites</button>
+                </div>
+            </div>
+
+            <p class="muted">
+                Showing <strong><span id="countShown">0</span></strong> of <strong><span
+                        id="countTotal">0</span></strong>.
             </p>
         </section>
 
         <section class="card">
-            <h2>Your quick stats</h2>
-            <div class="stats">
-                <div class="stat">
-                    <div class="stat__label">Saved favorites</div>
-                    <div class="stat__value" id="favoriteCount">0</div>
-                </div>
-                <div class="stat">
-                    <div class="stat__label">Preferred view</div>
-                    <div class="stat__value" id="preferredView">Grid</div>
-                </div>
-                <div class="stat">
-                    <div class="stat__label">Total destinations</div>
-                    <div class="stat__value" id="totalDestinations">20</div>
-                </div>
-            </div>
-        </section>
-
-        <section class="card">
-            <h2>Start here</h2>
-            <div class="cta">
-                <a class="btn" href="catalog.html">Browse destinations</a>
-                <a class="btn btn--ghost" href="join.html">Join the newsletter</a>
-            </div>
+            <h2 class="sr-only">Results</h2>
+            <div id="destinationsGrid" class="destinations" aria-live="polite"></div>
         </section>
     </main>
+
+    <dialog id="itemDialog" class="dialog" aria-labelledby="dialogTitle">
+        <div class="dialog__header">
+            <h2 id="dialogTitle" class="dialog__title">Details</h2>
+            <button id="dialogClose" class="icon-btn" type="button" aria-label="Close dialog">✕</button>
+        </div>
+        <div id="dialogBody" class="dialog__body"></div>
+    </dialog>
 
     <footer class="site-footer">
         <div class="footer__block">
